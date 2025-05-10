@@ -1,0 +1,23 @@
+Comparison Report: Uniform vs. Cayley Initialization
+==================================================
+
+Test Performance:
+  Uniform:
+    Test Accuracy: 95.00%
+    Test Loss: 0.0829
+    Best Validation Loss: 0.0584 (Epoch 18)
+
+  Cayley:
+    Test Accuracy: 80.00%
+    Test Loss: 0.3930
+    Best Validation Loss: 0.1618 (Epoch 27)
+
+Comparative Analysis:
+  Accuracy Difference (Cayley - Uniform): -15.00%
+  The Uniform initialization achieved higher accuracy.
+  Loss Difference (Uniform - Cayley): -0.3101
+  The Uniform initialization achieved lower loss.
+
+Conclusions:
+  The Uniform initialization outperformed Cayley initialization in both accuracy and loss.
+  This suggests that for this dataset, a dense connectivity pattern is more effective.

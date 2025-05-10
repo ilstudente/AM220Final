@@ -1,0 +1,719 @@
+{
+  "dataset": "PROTEINS",
+  "parameters": {
+    "top_k": 3,
+    "hidden_dim": 16,
+    "num_epochs": 10,
+    "seed": 42
+  },
+  "accuracy": {
+    "balanced_cayley": 0.7085201793721974,
+    "uniform": 0.7174887892376681
+  },
+  "oversquashing_metrics": {
+    "balanced_cayley": [
+      {
+        "graph_idx": 0,
+        "num_nodes": 25,
+        "metrics": {
+          "mean_effective_resistance": 2.9773612022399902,
+          "max_effective_resistance": 7.0193586349487305,
+          "std_effective_resistance": 1.893218755722046,
+          "bottleneck_edges": [
+            [
+              0,
+              24,
+              7.0193586349487305
+            ],
+            [
+              1,
+              24,
+              7.0193586349487305
+            ],
+            [
+              2,
+              24,
+              7.0193586349487305
+            ],
+            [
+              0,
+              15,
+              6.956295967102051
+            ],
+            [
+              0,
+              23,
+              6.956295967102051
+            ]
+          ],
+          "avg_path_length": 5.03,
+          "diameter": 12.0,
+          "clustering_coefficient": 0.6053333333333333,
+          "mean_degree": 3.52,
+          "std_degree": 0.6997142273814361,
+          "max_degree": 5.0,
+          "spectral_gap": 0.013256419652859446,
+          "cheeger_constant": 0.07317073170731707,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 1,
+        "num_nodes": 6,
+        "metrics": {
+          "mean_effective_resistance": 0.533333420753479,
+          "max_effective_resistance": 0.75,
+          "std_effective_resistance": 0.13540063798427582,
+          "bottleneck_edges": [
+            [
+              0,
+              4,
+              0.75
+            ],
+            [
+              0,
+              5,
+              0.75
+            ],
+            [
+              1,
+              4,
+              0.75
+            ],
+            [
+              1,
+              5,
+              0.75
+            ],
+            [
+              0,
+              1,
+              0.5
+            ]
+          ],
+          "avg_path_length": 1.2666666666666666,
+          "diameter": 2.0,
+          "clustering_coefficient": 0.8666666666666667,
+          "mean_degree": 3.6666666666666665,
+          "std_degree": 0.9428090415820634,
+          "max_degree": 5.0,
+          "spectral_gap": 0.6666666666666666,
+          "cheeger_constant": 0.45454545454545453,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 2,
+        "num_nodes": 12,
+        "metrics": {
+          "mean_effective_resistance": 1.5764706134796143,
+          "max_effective_resistance": 3.1102938652038574,
+          "std_effective_resistance": 0.9586231112480164,
+          "bottleneck_edges": [
+            [
+              0,
+              6,
+              3.1102938652038574
+            ],
+            [
+              0,
+              11,
+              3.1102938652038574
+            ],
+            [
+              6,
+              7,
+              3.1102938652038574
+            ],
+            [
+              7,
+              11,
+              3.1102938652038574
+            ],
+            [
+              0,
+              5,
+              2.9044113159179688
+            ]
+          ],
+          "avg_path_length": 2.742424242424242,
+          "diameter": 6.0,
+          "clustering_coefficient": 0.6944444444444445,
+          "mean_degree": 3.5,
+          "std_degree": 0.6454972243679028,
+          "max_degree": 5.0,
+          "spectral_gap": 0.04937380185400107,
+          "cheeger_constant": 0.1,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 4,
+        "num_nodes": 11,
+        "metrics": {
+          "mean_effective_resistance": 0.9543123245239258,
+          "max_effective_resistance": 1.759615421295166,
+          "std_effective_resistance": 0.4552038311958313,
+          "bottleneck_edges": [
+            [
+              2,
+              4,
+              1.759615421295166
+            ],
+            [
+              2,
+              5,
+              1.759615421295166
+            ],
+            [
+              3,
+              4,
+              1.759615421295166
+            ],
+            [
+              3,
+              5,
+              1.759615421295166
+            ],
+            [
+              0,
+              2,
+              1.5961538553237915
+            ]
+          ],
+          "avg_path_length": 2.0727272727272728,
+          "diameter": 4.0,
+          "clustering_coefficient": 0.7666666666666667,
+          "mean_degree": 3.8181818181818183,
+          "std_degree": 0.9359663764533637,
+          "max_degree": 5.0,
+          "spectral_gap": 0.10874702996813398,
+          "cheeger_constant": 0.1111111111111111,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 6,
+        "num_nodes": 15,
+        "metrics": {
+          "mean_effective_resistance": 1.633541464805603,
+          "max_effective_resistance": 3.4945356845855713,
+          "std_effective_resistance": 1.000060796737671,
+          "bottleneck_edges": [
+            [
+              0,
+              4,
+              3.4945356845855713
+            ],
+            [
+              0,
+              14,
+              3.4945356845855713
+            ],
+            [
+              0,
+              13,
+              3.301093101501465
+            ],
+            [
+              4,
+              5,
+              3.2945358753204346
+            ],
+            [
+              4,
+              7,
+              3.2945358753204346
+            ]
+          ],
+          "avg_path_length": 3.066666666666667,
+          "diameter": 7.0,
+          "clustering_coefficient": 0.6777777777777777,
+          "mean_degree": 3.7333333333333334,
+          "std_degree": 0.573488351136175,
+          "max_degree": 5.0,
+          "spectral_gap": 0.03710385178164285,
+          "cheeger_constant": 0.1111111111111111,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 7,
+        "num_nodes": 12,
+        "metrics": {
+          "mean_effective_resistance": 1.0501165390014648,
+          "max_effective_resistance": 2.134615421295166,
+          "std_effective_resistance": 0.4445239305496216,
+          "bottleneck_edges": [
+            [
+              0,
+              5,
+              2.134615421295166
+            ],
+            [
+              3,
+              5,
+              2.134615421295166
+            ],
+            [
+              0,
+              2,
+              1.903846263885498
+            ],
+            [
+              2,
+              3,
+              1.903846263885498
+            ],
+            [
+              1,
+              5,
+              1.822115421295166
+            ]
+          ],
+          "avg_path_length": 2.3484848484848486,
+          "diameter": 5.0,
+          "clustering_coefficient": 0.24166666666666667,
+          "mean_degree": 3.1666666666666665,
+          "std_degree": 0.8975274678557507,
+          "max_degree": 5.0,
+          "spectral_gap": 0.15024287581165127,
+          "cheeger_constant": 0.25,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 9,
+        "num_nodes": 17,
+        "metrics": {
+          "mean_effective_resistance": 1.5527034997940063,
+          "max_effective_resistance": 3.383620500564575,
+          "std_effective_resistance": 0.8874948024749756,
+          "bottleneck_edges": [
+            [
+              0,
+              11,
+              3.383620500564575
+            ],
+            [
+              0,
+              12,
+              3.383620500564575
+            ],
+            [
+              0,
+              13,
+              3.383620500564575
+            ],
+            [
+              1,
+              11,
+              3.383620500564575
+            ],
+            [
+              1,
+              12,
+              3.383620500564575
+            ]
+          ],
+          "avg_path_length": 3.3970588235294117,
+          "diameter": 8.0,
+          "clustering_coefficient": 0.6823529411764706,
+          "mean_degree": 3.764705882352941,
+          "std_degree": 0.7299808027053445,
+          "max_degree": 5.0,
+          "spectral_gap": 0.03840671178660479,
+          "cheeger_constant": 0.0967741935483871,
+          "dirichlet_energy": 0.0
+        }
+      }
+    ],
+    "uniform": [
+      {
+        "graph_idx": 0,
+        "num_nodes": 25,
+        "metrics": {
+          "mean_effective_resistance": 2.9773612022399902,
+          "max_effective_resistance": 7.0193586349487305,
+          "std_effective_resistance": 1.893218755722046,
+          "bottleneck_edges": [
+            [
+              0,
+              24,
+              7.0193586349487305
+            ],
+            [
+              1,
+              24,
+              7.0193586349487305
+            ],
+            [
+              2,
+              24,
+              7.0193586349487305
+            ],
+            [
+              0,
+              15,
+              6.956295967102051
+            ],
+            [
+              0,
+              23,
+              6.956295967102051
+            ]
+          ],
+          "avg_path_length": 5.03,
+          "diameter": 12.0,
+          "clustering_coefficient": 0.6053333333333333,
+          "mean_degree": 3.52,
+          "std_degree": 0.6997142273814361,
+          "max_degree": 5.0,
+          "spectral_gap": 0.013256419652859446,
+          "cheeger_constant": 0.07317073170731707,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 1,
+        "num_nodes": 6,
+        "metrics": {
+          "mean_effective_resistance": 0.533333420753479,
+          "max_effective_resistance": 0.75,
+          "std_effective_resistance": 0.13540063798427582,
+          "bottleneck_edges": [
+            [
+              0,
+              4,
+              0.75
+            ],
+            [
+              0,
+              5,
+              0.75
+            ],
+            [
+              1,
+              4,
+              0.75
+            ],
+            [
+              1,
+              5,
+              0.75
+            ],
+            [
+              0,
+              1,
+              0.5
+            ]
+          ],
+          "avg_path_length": 1.2666666666666666,
+          "diameter": 2.0,
+          "clustering_coefficient": 0.8666666666666667,
+          "mean_degree": 3.6666666666666665,
+          "std_degree": 0.9428090415820634,
+          "max_degree": 5.0,
+          "spectral_gap": 0.6666666666666666,
+          "cheeger_constant": 0.45454545454545453,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 2,
+        "num_nodes": 12,
+        "metrics": {
+          "mean_effective_resistance": 1.5764706134796143,
+          "max_effective_resistance": 3.1102938652038574,
+          "std_effective_resistance": 0.9586231112480164,
+          "bottleneck_edges": [
+            [
+              0,
+              6,
+              3.1102938652038574
+            ],
+            [
+              0,
+              11,
+              3.1102938652038574
+            ],
+            [
+              6,
+              7,
+              3.1102938652038574
+            ],
+            [
+              7,
+              11,
+              3.1102938652038574
+            ],
+            [
+              0,
+              5,
+              2.9044113159179688
+            ]
+          ],
+          "avg_path_length": 2.742424242424242,
+          "diameter": 6.0,
+          "clustering_coefficient": 0.6944444444444445,
+          "mean_degree": 3.5,
+          "std_degree": 0.6454972243679028,
+          "max_degree": 5.0,
+          "spectral_gap": 0.04937380185400107,
+          "cheeger_constant": 0.1,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 4,
+        "num_nodes": 11,
+        "metrics": {
+          "mean_effective_resistance": 0.9543123245239258,
+          "max_effective_resistance": 1.759615421295166,
+          "std_effective_resistance": 0.4552038311958313,
+          "bottleneck_edges": [
+            [
+              2,
+              4,
+              1.759615421295166
+            ],
+            [
+              2,
+              5,
+              1.759615421295166
+            ],
+            [
+              3,
+              4,
+              1.759615421295166
+            ],
+            [
+              3,
+              5,
+              1.759615421295166
+            ],
+            [
+              0,
+              2,
+              1.5961538553237915
+            ]
+          ],
+          "avg_path_length": 2.0727272727272728,
+          "diameter": 4.0,
+          "clustering_coefficient": 0.7666666666666667,
+          "mean_degree": 3.8181818181818183,
+          "std_degree": 0.9359663764533637,
+          "max_degree": 5.0,
+          "spectral_gap": 0.10874702996813398,
+          "cheeger_constant": 0.1111111111111111,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 6,
+        "num_nodes": 15,
+        "metrics": {
+          "mean_effective_resistance": 1.633541464805603,
+          "max_effective_resistance": 3.4945356845855713,
+          "std_effective_resistance": 1.000060796737671,
+          "bottleneck_edges": [
+            [
+              0,
+              4,
+              3.4945356845855713
+            ],
+            [
+              0,
+              14,
+              3.4945356845855713
+            ],
+            [
+              0,
+              13,
+              3.301093101501465
+            ],
+            [
+              4,
+              5,
+              3.2945358753204346
+            ],
+            [
+              4,
+              7,
+              3.2945358753204346
+            ]
+          ],
+          "avg_path_length": 3.066666666666667,
+          "diameter": 7.0,
+          "clustering_coefficient": 0.6777777777777777,
+          "mean_degree": 3.7333333333333334,
+          "std_degree": 0.573488351136175,
+          "max_degree": 5.0,
+          "spectral_gap": 0.03710385178164285,
+          "cheeger_constant": 0.1111111111111111,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 7,
+        "num_nodes": 12,
+        "metrics": {
+          "mean_effective_resistance": 1.0501165390014648,
+          "max_effective_resistance": 2.134615421295166,
+          "std_effective_resistance": 0.4445239305496216,
+          "bottleneck_edges": [
+            [
+              0,
+              5,
+              2.134615421295166
+            ],
+            [
+              3,
+              5,
+              2.134615421295166
+            ],
+            [
+              0,
+              2,
+              1.903846263885498
+            ],
+            [
+              2,
+              3,
+              1.903846263885498
+            ],
+            [
+              1,
+              5,
+              1.822115421295166
+            ]
+          ],
+          "avg_path_length": 2.3484848484848486,
+          "diameter": 5.0,
+          "clustering_coefficient": 0.24166666666666667,
+          "mean_degree": 3.1666666666666665,
+          "std_degree": 0.8975274678557507,
+          "max_degree": 5.0,
+          "spectral_gap": 0.15024287581165127,
+          "cheeger_constant": 0.25,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 9,
+        "num_nodes": 17,
+        "metrics": {
+          "mean_effective_resistance": 1.5527034997940063,
+          "max_effective_resistance": 3.383620500564575,
+          "std_effective_resistance": 0.8874948024749756,
+          "bottleneck_edges": [
+            [
+              0,
+              11,
+              3.383620500564575
+            ],
+            [
+              0,
+              12,
+              3.383620500564575
+            ],
+            [
+              0,
+              13,
+              3.383620500564575
+            ],
+            [
+              1,
+              11,
+              3.383620500564575
+            ],
+            [
+              1,
+              12,
+              3.383620500564575
+            ]
+          ],
+          "avg_path_length": 3.3970588235294117,
+          "diameter": 8.0,
+          "clustering_coefficient": 0.6823529411764706,
+          "mean_degree": 3.764705882352941,
+          "std_degree": 0.7299808027053445,
+          "max_degree": 5.0,
+          "spectral_gap": 0.03840671178660479,
+          "cheeger_constant": 0.0967741935483871,
+          "dirichlet_energy": 0.0
+        }
+      }
+    ]
+  },
+  "learning_curves": {
+    "balanced_cayley": {
+      "train_loss": [
+        0.6746475842561614,
+        0.6555957656228141,
+        0.6377745328324564,
+        0.6360609097427197,
+        0.6318017336759675,
+        0.620671028501532,
+        0.6201887403981069,
+        0.6180294596747066,
+        0.6146340913986892,
+        0.611858350373386
+      ],
+      "train_acc": [
+        0.6033707865168539,
+        0.6426966292134831,
+        0.6640449438202247,
+        0.6449438202247191,
+        0.6494382022471911,
+        0.6741573033707865,
+        0.6707865168539325,
+        0.6764044943820224,
+        0.6752808988764045,
+        0.6764044943820224
+      ],
+      "test_acc": [
+        0.6636771300448431,
+        0.6905829596412556,
+        0.7130044843049327,
+        0.7130044843049327,
+        0.7130044843049327,
+        0.7085201793721974
+      ]
+    },
+    "uniform": {
+      "train_loss": [
+        0.692713664087017,
+        0.6644611015748442,
+        0.6487004259998879,
+        0.6362162950333584,
+        0.6263666590947783,
+        0.6263005329651778,
+        0.6237488875228367,
+        0.6162697690256526,
+        0.6212514679083664,
+        0.6137762002730638
+      ],
+      "train_acc": [
+        0.5730337078651685,
+        0.6393258426966292,
+        0.6550561797752809,
+        0.6539325842696629,
+        0.6786516853932584,
+        0.6707865168539325,
+        0.6617977528089888,
+        0.6651685393258427,
+        0.6719101123595506,
+        0.6797752808988764
+      ],
+      "test_acc": [
+        0.6502242152466368,
+        0.6547085201793722,
+        0.7174887892376681,
+        0.7174887892376681,
+        0.7174887892376681,
+        0.7174887892376681
+      ]
+    }
+  }
+}

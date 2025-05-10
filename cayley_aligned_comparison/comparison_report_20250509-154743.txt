@@ -1,0 +1,12 @@
+Comparison Report: Uniform vs. Cayley Initialization
+=====================================================
+
+Analysis:
+  The Cayley initialization uses a mathematical structure based on the Cayley graph
+  to connect base nodes to virtual nodes. This creates a sparse but structured connectivity
+  pattern, which may help the model propagate information more effectively across
+  distant parts of the graph.
+
+  In contrast, the uniform initialization connects each base node to every virtual node
+  with equal weights, which may lead to over-smoothing or less effective message passing.
+

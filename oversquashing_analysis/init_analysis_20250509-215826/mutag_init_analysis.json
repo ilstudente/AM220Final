@@ -1,0 +1,13 @@
+{
+  "dataset": "MUTAG",
+  "parameters": {
+    "top_k": 3,
+    "hidden_dim": 16,
+    "seed": 42,
+    "num_graphs": 10
+  },
+  "oversquashing_metrics": {
+    "balanced_cayley": [],
+    "uniform": []
+  }
+}

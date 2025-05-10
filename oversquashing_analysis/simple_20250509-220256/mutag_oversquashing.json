@@ -1,0 +1,475 @@
+{
+  "dataset": "MUTAG",
+  "parameters": {
+    "top_k": 3,
+    "hidden_dim": 16,
+    "seed": 42,
+    "num_graphs": 5
+  },
+  "metrics": {
+    "balanced_cayley": [
+      {
+        "graph_idx": 0,
+        "num_nodes": 17,
+        "oversquashing": {
+          "mean_effective_resistance": 2.3217272758483887,
+          "max_effective_resistance": 5.2941179275512695,
+          "std_effective_resistance": 1.1941624879837036,
+          "bottleneck_edges": [
+            [
+              0,
+              15,
+              5.2941179275512695
+            ],
+            [
+              0,
+              16,
+              5.2941179275512695
+            ],
+            [
+              1,
+              15,
+              5.240196228027344
+            ],
+            [
+              1,
+              16,
+              5.240196228027344
+            ],
+            [
+              5,
+              15,
+              5.004901885986328
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 3.6176470588235294,
+          "diameter": 9.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.235294117647059,
+          "std_degree": 0.6443794794178425,
+          "max_degree": 3.0,
+          "spectral_gap": 0.06421022480703201
+        },
+        "cheeger_constant": 0.032105112403516003
+      },
+      {
+        "graph_idx": 1,
+        "num_nodes": 13,
+        "oversquashing": {
+          "mean_effective_resistance": 2.054945230484009,
+          "max_effective_resistance": 4.114285945892334,
+          "std_effective_resistance": 0.9714153409004211,
+          "bottleneck_edges": [
+            [
+              4,
+              11,
+              4.114285945892334
+            ],
+            [
+              4,
+              12,
+              4.114285945892334
+            ],
+            [
+              5,
+              11,
+              4.028571605682373
+            ],
+            [
+              5,
+              12,
+              4.028571605682373
+            ],
+            [
+              3,
+              11,
+              3.8571431636810303
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 2.8974358974358974,
+          "diameter": 6.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.1538461538461537,
+          "std_degree": 0.6617173282340483,
+          "max_degree": 3.0,
+          "spectral_gap": 0.11289460276246058
+        },
+        "cheeger_constant": 0.05644730138123029
+      },
+      {
+        "graph_idx": 2,
+        "num_nodes": 13,
+        "oversquashing": {
+          "mean_effective_resistance": 2.054945230484009,
+          "max_effective_resistance": 4.114285945892334,
+          "std_effective_resistance": 0.9714153409004211,
+          "bottleneck_edges": [
+            [
+              6,
+              11,
+              4.114285945892334
+            ],
+            [
+              6,
+              12,
+              4.114285945892334
+            ],
+            [
+              5,
+              11,
+              4.028571605682373
+            ],
+            [
+              5,
+              12,
+              4.028571605682373
+            ],
+            [
+              7,
+              11,
+              3.8571431636810303
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 2.8974358974358974,
+          "diameter": 6.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.1538461538461537,
+          "std_degree": 0.6617173282340483,
+          "max_degree": 3.0,
+          "spectral_gap": 0.11289460276246027
+        },
+        "cheeger_constant": 0.056447301381230136
+      },
+      {
+        "graph_idx": 3,
+        "num_nodes": 19,
+        "oversquashing": {
+          "mean_effective_resistance": 2.1556525230407715,
+          "max_effective_resistance": 4.676692008972168,
+          "std_effective_resistance": 1.0219610929489136,
+          "bottleneck_edges": [
+            [
+              0,
+              17,
+              4.676692008972168
+            ],
+            [
+              0,
+              18,
+              4.676692008972168
+            ],
+            [
+              1,
+              17,
+              4.631579399108887
+            ],
+            [
+              1,
+              18,
+              4.631579399108887
+            ],
+            [
+              5,
+              17,
+              4.375940322875977
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 3.426900584795322,
+          "diameter": 7.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.3157894736842106,
+          "std_degree": 0.653140718210045,
+          "max_degree": 3.0,
+          "spectral_gap": 0.0823928548393152
+        },
+        "cheeger_constant": 0.0411964274196576
+      },
+      {
+        "graph_idx": 4,
+        "num_nodes": 11,
+        "oversquashing": {
+          "mean_effective_resistance": 2.157576084136963,
+          "max_effective_resistance": 4.3333330154418945,
+          "std_effective_resistance": 0.9864833950996399,
+          "bottleneck_edges": [
+            [
+              6,
+              8,
+              4.3333330154418945
+            ],
+            [
+              6,
+              9,
+              4.3333330154418945
+            ],
+            [
+              8,
+              10,
+              3.8333330154418945
+            ],
+            [
+              9,
+              10,
+              3.8333330154418945
+            ],
+            [
+              0,
+              8,
+              3.5
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 2.690909090909091,
+          "diameter": 5.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.0,
+          "std_degree": 0.8528028654224418,
+          "max_degree": 3.0,
+          "spectral_gap": 0.14395996365503153
+        },
+        "cheeger_constant": 0.07197998182751576
+      }
+    ],
+    "uniform": [
+      {
+        "graph_idx": 0,
+        "num_nodes": 17,
+        "oversquashing": {
+          "mean_effective_resistance": 2.3217272758483887,
+          "max_effective_resistance": 5.2941179275512695,
+          "std_effective_resistance": 1.1941624879837036,
+          "bottleneck_edges": [
+            [
+              0,
+              15,
+              5.2941179275512695
+            ],
+            [
+              0,
+              16,
+              5.2941179275512695
+            ],
+            [
+              1,
+              15,
+              5.240196228027344
+            ],
+            [
+              1,
+              16,
+              5.240196228027344
+            ],
+            [
+              5,
+              15,
+              5.004901885986328
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 3.6176470588235294,
+          "diameter": 9.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.235294117647059,
+          "std_degree": 0.6443794794178425,
+          "max_degree": 3.0,
+          "spectral_gap": 0.06421022480703201
+        },
+        "cheeger_constant": 0.032105112403516003
+      },
+      {
+        "graph_idx": 1,
+        "num_nodes": 13,
+        "oversquashing": {
+          "mean_effective_resistance": 2.054945230484009,
+          "max_effective_resistance": 4.114285945892334,
+          "std_effective_resistance": 0.9714153409004211,
+          "bottleneck_edges": [
+            [
+              4,
+              11,
+              4.114285945892334
+            ],
+            [
+              4,
+              12,
+              4.114285945892334
+            ],
+            [
+              5,
+              11,
+              4.028571605682373
+            ],
+            [
+              5,
+              12,
+              4.028571605682373
+            ],
+            [
+              3,
+              11,
+              3.8571431636810303
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 2.8974358974358974,
+          "diameter": 6.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.1538461538461537,
+          "std_degree": 0.6617173282340483,
+          "max_degree": 3.0,
+          "spectral_gap": 0.11289460276246058
+        },
+        "cheeger_constant": 0.05644730138123029
+      },
+      {
+        "graph_idx": 2,
+        "num_nodes": 13,
+        "oversquashing": {
+          "mean_effective_resistance": 2.054945230484009,
+          "max_effective_resistance": 4.114285945892334,
+          "std_effective_resistance": 0.9714153409004211,
+          "bottleneck_edges": [
+            [
+              6,
+              11,
+              4.114285945892334
+            ],
+            [
+              6,
+              12,
+              4.114285945892334
+            ],
+            [
+              5,
+              11,
+              4.028571605682373
+            ],
+            [
+              5,
+              12,
+              4.028571605682373
+            ],
+            [
+              7,
+              11,
+              3.8571431636810303
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 2.8974358974358974,
+          "diameter": 6.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.1538461538461537,
+          "std_degree": 0.6617173282340483,
+          "max_degree": 3.0,
+          "spectral_gap": 0.11289460276246027
+        },
+        "cheeger_constant": 0.056447301381230136
+      },
+      {
+        "graph_idx": 3,
+        "num_nodes": 19,
+        "oversquashing": {
+          "mean_effective_resistance": 2.1556525230407715,
+          "max_effective_resistance": 4.676692008972168,
+          "std_effective_resistance": 1.0219610929489136,
+          "bottleneck_edges": [
+            [
+              0,
+              17,
+              4.676692008972168
+            ],
+            [
+              0,
+              18,
+              4.676692008972168
+            ],
+            [
+              1,
+              17,
+              4.631579399108887
+            ],
+            [
+              1,
+              18,
+              4.631579399108887
+            ],
+            [
+              5,
+              17,
+              4.375940322875977
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 3.426900584795322,
+          "diameter": 7.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.3157894736842106,
+          "std_degree": 0.653140718210045,
+          "max_degree": 3.0,
+          "spectral_gap": 0.0823928548393152
+        },
+        "cheeger_constant": 0.0411964274196576
+      },
+      {
+        "graph_idx": 4,
+        "num_nodes": 11,
+        "oversquashing": {
+          "mean_effective_resistance": 2.157576084136963,
+          "max_effective_resistance": 4.3333330154418945,
+          "std_effective_resistance": 0.9864833950996399,
+          "bottleneck_edges": [
+            [
+              6,
+              8,
+              4.3333330154418945
+            ],
+            [
+              6,
+              9,
+              4.3333330154418945
+            ],
+            [
+              8,
+              10,
+              3.8333330154418945
+            ],
+            [
+              9,
+              10,
+              3.8333330154418945
+            ],
+            [
+              0,
+              8,
+              3.5
+            ]
+          ]
+        },
+        "connectivity": {
+          "avg_path_length": 2.690909090909091,
+          "diameter": 5.0,
+          "clustering_coefficient": 0.0,
+          "mean_degree": 2.0,
+          "std_degree": 0.8528028654224418,
+          "max_degree": 3.0,
+          "spectral_gap": 0.14395996365503153
+        },
+        "cheeger_constant": 0.07197998182751576
+      }
+    ]
+  }
+}

@@ -1,0 +1,629 @@
+{
+  "dataset": "ENZYMES",
+  "parameters": {
+    "top_k": 3,
+    "hidden_dim": 16,
+    "num_epochs": 10,
+    "seed": 42
+  },
+  "accuracy": {
+    "balanced_cayley": 0.30833333333333335,
+    "uniform": 0.325
+  },
+  "oversquashing_metrics": {
+    "balanced_cayley": [
+      {
+        "graph_idx": 0,
+        "num_nodes": 27,
+        "metrics": {
+          "mean_effective_resistance": 0.9186699390411377,
+          "max_effective_resistance": 2.273686170578003,
+          "std_effective_resistance": 0.4430222511291504,
+          "bottleneck_edges": [
+            [
+              0,
+              12,
+              2.273686170578003
+            ],
+            [
+              0,
+              22,
+              2.273686170578003
+            ],
+            [
+              6,
+              12,
+              2.08156156539917
+            ],
+            [
+              6,
+              22,
+              2.08156156539917
+            ],
+            [
+              0,
+              11,
+              2.0179190635681152
+            ]
+          ],
+          "avg_path_length": 3.03988603988604,
+          "diameter": 7.0,
+          "clustering_coefficient": 0.3493827160493827,
+          "mean_degree": 4.518518518518518,
+          "std_degree": 1.067026688213921,
+          "max_degree": 6.0,
+          "spectral_gap": 0.05331781255730223,
+          "cheeger_constant": 0.0847457627118644,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 1,
+        "num_nodes": 18,
+        "metrics": {
+          "mean_effective_resistance": 1.7836852073669434,
+          "max_effective_resistance": 3.7868549823760986,
+          "std_effective_resistance": 1.0785480737686157,
+          "bottleneck_edges": [
+            [
+              14,
+              17,
+              3.7868549823760986
+            ],
+            [
+              4,
+              14,
+              3.690598487854004
+            ],
+            [
+              12,
+              14,
+              3.690598487854004
+            ],
+            [
+              5,
+              17,
+              3.6571249961853027
+            ],
+            [
+              13,
+              17,
+              3.6571249961853027
+            ]
+          ],
+          "avg_path_length": 3.3986928104575163,
+          "diameter": 8.0,
+          "clustering_coefficient": 0.6722222222222222,
+          "mean_degree": 3.888888888888889,
+          "std_degree": 0.7370277311900889,
+          "max_degree": 5.0,
+          "spectral_gap": 0.02719533932524615,
+          "cheeger_constant": 0.08571428571428572,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 2,
+        "num_nodes": 22,
+        "metrics": {
+          "mean_effective_resistance": 1.350770354270935,
+          "max_effective_resistance": 3.0564255714416504,
+          "std_effective_resistance": 0.7538980841636658,
+          "bottleneck_edges": [
+            [
+              15,
+              17,
+              3.0564255714416504
+            ],
+            [
+              16,
+              17,
+              3.0564255714416504
+            ],
+            [
+              0,
+              15,
+              3.012280225753784
+            ],
+            [
+              0,
+              16,
+              3.012280225753784
+            ],
+            [
+              1,
+              15,
+              2.9502310752868652
+            ]
+          ],
+          "avg_path_length": 3.5238095238095237,
+          "diameter": 8.0,
+          "clustering_coefficient": 0.5954545454545455,
+          "mean_degree": 4.2727272727272725,
+          "std_degree": 0.6863485850246136,
+          "max_degree": 6.0,
+          "spectral_gap": 0.03239121031084134,
+          "cheeger_constant": 0.1111111111111111,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 3,
+        "num_nodes": 25,
+        "metrics": {
+          "mean_effective_resistance": 2.4637997150421143,
+          "max_effective_resistance": 5.892856597900391,
+          "std_effective_resistance": 1.5405060052871704,
+          "bottleneck_edges": [
+            [
+              0,
+              16,
+              5.892856597900391
+            ],
+            [
+              0,
+              17,
+              5.892856597900391
+            ],
+            [
+              0,
+              18,
+              5.892856597900391
+            ],
+            [
+              1,
+              16,
+              5.892856597900391
+            ],
+            [
+              1,
+              17,
+              5.892856597900391
+            ]
+          ],
+          "avg_path_length": 4.626666666666667,
+          "diameter": 11.0,
+          "clustering_coefficient": 0.7066666666666667,
+          "mean_degree": 3.68,
+          "std_degree": 0.926066952223218,
+          "max_degree": 6.0,
+          "spectral_gap": 0.016922564972426876,
+          "cheeger_constant": 0.09523809523809523,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 6,
+        "num_nodes": 15,
+        "metrics": {
+          "mean_effective_resistance": 1.8726190328598022,
+          "max_effective_resistance": 3.875000238418579,
+          "std_effective_resistance": 1.1335792541503906,
+          "bottleneck_edges": [
+            [
+              0,
+              4,
+              3.875000238418579
+            ],
+            [
+              0,
+              9,
+              3.875000238418579
+            ],
+            [
+              2,
+              4,
+              3.875000238418579
+            ],
+            [
+              2,
+              9,
+              3.875000238418579
+            ],
+            [
+              3,
+              4,
+              3.875000238418579
+            ]
+          ],
+          "avg_path_length": 2.9238095238095236,
+          "diameter": 6.0,
+          "clustering_coefficient": 0.7866666666666667,
+          "mean_degree": 3.6,
+          "std_degree": 0.8,
+          "max_degree": 6.0,
+          "spectral_gap": 0.03576988408283485,
+          "cheeger_constant": 0.037037037037037035,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 9,
+        "num_nodes": 24,
+        "metrics": {
+          "mean_effective_resistance": 1.4064055681228638,
+          "max_effective_resistance": 3.693967342376709,
+          "std_effective_resistance": 0.9471793174743652,
+          "bottleneck_edges": [
+            [
+              10,
+              12,
+              3.693967342376709
+            ],
+            [
+              10,
+              20,
+              3.693967342376709
+            ],
+            [
+              10,
+              21,
+              3.693967342376709
+            ],
+            [
+              12,
+              18,
+              3.693967342376709
+            ],
+            [
+              18,
+              20,
+              3.693967342376709
+            ]
+          ],
+          "avg_path_length": 3.4855072463768115,
+          "diameter": 9.0,
+          "clustering_coefficient": 0.5611111111111111,
+          "mean_degree": 4.166666666666667,
+          "std_degree": 1.1785113019775795,
+          "max_degree": 7.0,
+          "spectral_gap": 0.03650163018552266,
+          "cheeger_constant": 0.13043478260869565,
+          "dirichlet_energy": 0.0
+        }
+      }
+    ],
+    "uniform": [
+      {
+        "graph_idx": 0,
+        "num_nodes": 27,
+        "metrics": {
+          "mean_effective_resistance": 0.9186699390411377,
+          "max_effective_resistance": 2.273686170578003,
+          "std_effective_resistance": 0.4430222511291504,
+          "bottleneck_edges": [
+            [
+              0,
+              12,
+              2.273686170578003
+            ],
+            [
+              0,
+              22,
+              2.273686170578003
+            ],
+            [
+              6,
+              12,
+              2.08156156539917
+            ],
+            [
+              6,
+              22,
+              2.08156156539917
+            ],
+            [
+              0,
+              11,
+              2.0179190635681152
+            ]
+          ],
+          "avg_path_length": 3.03988603988604,
+          "diameter": 7.0,
+          "clustering_coefficient": 0.3493827160493827,
+          "mean_degree": 4.518518518518518,
+          "std_degree": 1.067026688213921,
+          "max_degree": 6.0,
+          "spectral_gap": 0.05331781255730223,
+          "cheeger_constant": 0.0847457627118644,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 1,
+        "num_nodes": 18,
+        "metrics": {
+          "mean_effective_resistance": 1.7836852073669434,
+          "max_effective_resistance": 3.7868549823760986,
+          "std_effective_resistance": 1.0785480737686157,
+          "bottleneck_edges": [
+            [
+              14,
+              17,
+              3.7868549823760986
+            ],
+            [
+              4,
+              14,
+              3.690598487854004
+            ],
+            [
+              12,
+              14,
+              3.690598487854004
+            ],
+            [
+              5,
+              17,
+              3.6571249961853027
+            ],
+            [
+              13,
+              17,
+              3.6571249961853027
+            ]
+          ],
+          "avg_path_length": 3.3986928104575163,
+          "diameter": 8.0,
+          "clustering_coefficient": 0.6722222222222222,
+          "mean_degree": 3.888888888888889,
+          "std_degree": 0.7370277311900889,
+          "max_degree": 5.0,
+          "spectral_gap": 0.02719533932524615,
+          "cheeger_constant": 0.08571428571428572,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 2,
+        "num_nodes": 22,
+        "metrics": {
+          "mean_effective_resistance": 1.350770354270935,
+          "max_effective_resistance": 3.0564255714416504,
+          "std_effective_resistance": 0.7538980841636658,
+          "bottleneck_edges": [
+            [
+              15,
+              17,
+              3.0564255714416504
+            ],
+            [
+              16,
+              17,
+              3.0564255714416504
+            ],
+            [
+              0,
+              15,
+              3.012280225753784
+            ],
+            [
+              0,
+              16,
+              3.012280225753784
+            ],
+            [
+              1,
+              15,
+              2.9502310752868652
+            ]
+          ],
+          "avg_path_length": 3.5238095238095237,
+          "diameter": 8.0,
+          "clustering_coefficient": 0.5954545454545455,
+          "mean_degree": 4.2727272727272725,
+          "std_degree": 0.6863485850246136,
+          "max_degree": 6.0,
+          "spectral_gap": 0.03239121031084134,
+          "cheeger_constant": 0.1111111111111111,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 3,
+        "num_nodes": 25,
+        "metrics": {
+          "mean_effective_resistance": 2.4637997150421143,
+          "max_effective_resistance": 5.892856597900391,
+          "std_effective_resistance": 1.5405060052871704,
+          "bottleneck_edges": [
+            [
+              0,
+              16,
+              5.892856597900391
+            ],
+            [
+              0,
+              17,
+              5.892856597900391
+            ],
+            [
+              0,
+              18,
+              5.892856597900391
+            ],
+            [
+              1,
+              16,
+              5.892856597900391
+            ],
+            [
+              1,
+              17,
+              5.892856597900391
+            ]
+          ],
+          "avg_path_length": 4.626666666666667,
+          "diameter": 11.0,
+          "clustering_coefficient": 0.7066666666666667,
+          "mean_degree": 3.68,
+          "std_degree": 0.926066952223218,
+          "max_degree": 6.0,
+          "spectral_gap": 0.016922564972426876,
+          "cheeger_constant": 0.09523809523809523,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 6,
+        "num_nodes": 15,
+        "metrics": {
+          "mean_effective_resistance": 1.8726190328598022,
+          "max_effective_resistance": 3.875000238418579,
+          "std_effective_resistance": 1.1335792541503906,
+          "bottleneck_edges": [
+            [
+              0,
+              4,
+              3.875000238418579
+            ],
+            [
+              0,
+              9,
+              3.875000238418579
+            ],
+            [
+              2,
+              4,
+              3.875000238418579
+            ],
+            [
+              2,
+              9,
+              3.875000238418579
+            ],
+            [
+              3,
+              4,
+              3.875000238418579
+            ]
+          ],
+          "avg_path_length": 2.9238095238095236,
+          "diameter": 6.0,
+          "clustering_coefficient": 0.7866666666666667,
+          "mean_degree": 3.6,
+          "std_degree": 0.8,
+          "max_degree": 6.0,
+          "spectral_gap": 0.03576988408283485,
+          "cheeger_constant": 0.037037037037037035,
+          "dirichlet_energy": 0.0
+        }
+      },
+      {
+        "graph_idx": 9,
+        "num_nodes": 24,
+        "metrics": {
+          "mean_effective_resistance": 1.4064055681228638,
+          "max_effective_resistance": 3.693967342376709,
+          "std_effective_resistance": 0.9471793174743652,
+          "bottleneck_edges": [
+            [
+              10,
+              12,
+              3.693967342376709
+            ],
+            [
+              10,
+              20,
+              3.693967342376709
+            ],
+            [
+              10,
+              21,
+              3.693967342376709
+            ],
+            [
+              12,
+              18,
+              3.693967342376709
+            ],
+            [
+              18,
+              20,
+              3.693967342376709
+            ]
+          ],
+          "avg_path_length": 3.4855072463768115,
+          "diameter": 9.0,
+          "clustering_coefficient": 0.5611111111111111,
+          "mean_degree": 4.166666666666667,
+          "std_degree": 1.1785113019775795,
+          "max_degree": 7.0,
+          "spectral_gap": 0.03650163018552266,
+          "cheeger_constant": 0.13043478260869565,
+          "dirichlet_energy": 0.0
+        }
+      }
+    ]
+  },
+  "learning_curves": {
+    "balanced_cayley": {
+      "train_loss": [
+        1.7984582126140594,
+        1.7865250666936239,
+        1.76938756108284,
+        1.7521116435527802,
+        1.7525501906871797,
+        1.7418784201145172,
+        1.7368118464946747,
+        1.7274906933307648,
+        1.7255585233370463,
+        1.7190406382083894
+      ],
+      "train_acc": [
+        0.15208333333333332,
+        0.19166666666666668,
+        0.2,
+        0.22083333333333333,
+        0.19791666666666666,
+        0.2125,
+        0.2604166666666667,
+        0.25,
+        0.25416666666666665,
+        0.24583333333333332
+      ],
+      "test_acc": [
+        0.225,
+        0.2,
+        0.21666666666666667,
+        0.25,
+        0.25,
+        0.30833333333333335
+      ]
+    },
+    "uniform": {
+      "train_loss": [
+        1.803871085246404,
+        1.7788838148117065,
+        1.7731470147768655,
+        1.7593782782554626,
+        1.753355199098587,
+        1.7418730040391286,
+        1.737543664375941,
+        1.7333229422569274,
+        1.7342125614484152,
+        1.722366734345754
+      ],
+      "train_acc": [
+        0.1625,
+        0.19375,
+        0.20833333333333334,
+        0.24791666666666667,
+        0.24583333333333332,
+        0.25833333333333336,
+        0.22291666666666668,
+        0.25416666666666665,
+        0.27708333333333335,
+        0.2520833333333333
+      ],
+      "test_acc": [
+        0.26666666666666666,
+        0.20833333333333334,
+        0.25833333333333336,
+        0.24166666666666667,
+        0.21666666666666667,
+        0.325
+      ]
+    }
+  }
+}

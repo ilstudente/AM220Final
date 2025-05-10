@@ -1,0 +1,16 @@
+INFO:root:Using device cpu
+/usr/local/python/3.12.1/lib/python3.12/site-packages/torch_geometric/data/in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+/usr/local/python/3.12.1/lib/python3.12/site-packages/torch_geometric/data/in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+INFO:root:===========starting 0th run, 0th fold=================
+Traceback (most recent call last):
+  File "/workspaces/IPR-MPNN/run.py", line 188, in <module>
+    main(args, wandb)
+  File "/workspaces/IPR-MPNN/run.py", line 84, in main
+    model = get_model(args, device)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/IPR-MPNN/models/get_model.py", line 102, in get_model
+    base={'in_channels': atom_encoder.out_dim,
+                         ^^^^^^^^^^^^
+NameError: name 'atom_encoder' is not defined. Did you mean: 'get_atom_encoder'?

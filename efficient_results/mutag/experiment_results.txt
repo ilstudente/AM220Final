@@ -1,0 +1,9 @@
+Dataset: MUTAG
+Epochs: 10
+Top-k: 3
+Batch size: 4
+Hidden dim: 16
+
+Final Test Accuracy:
+Balanced Cayley: 0.6579
+Uniform: 0.6316

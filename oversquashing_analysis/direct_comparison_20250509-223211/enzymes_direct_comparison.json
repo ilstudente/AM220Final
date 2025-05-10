@@ -1,0 +1,102 @@
+{
+  "dataset": "ENZYMES",
+  "num_graphs_analyzed": 7,
+  "balanced_vs_uniform": {
+    "num_nodes": {
+      "balanced_avg": 24.0,
+      "uniform_avg": 24.0,
+      "difference": 0.0,
+      "percent_diff": 0.0,
+      "better": "uniform"
+    },
+    "num_virtual_nodes": {
+      "balanced_avg": 10.0,
+      "uniform_avg": 10.0,
+      "difference": 0.0,
+      "percent_diff": 0.0,
+      "better": "uniform"
+    },
+    "num_edges": {
+      "balanced_avg": 208.85714285714286,
+      "uniform_avg": 276.57142857142856,
+      "difference": -67.7142857142857,
+      "percent_diff": -24.48347107438016,
+      "better": "uniform"
+    },
+    "density": {
+      "balanced_avg": 0.7542708016621061,
+      "uniform_avg": 1.0,
+      "difference": -0.24572919833789386,
+      "percent_diff": -24.572919833789385,
+      "better": "uniform"
+    },
+    "avg_path_length": {
+      "balanced_avg": 0.0507398361511253,
+      "uniform_avg": 0.33333335320154855,
+      "difference": -0.28259351705042324,
+      "percent_diff": -84.77805006196134,
+      "better": "balanced"
+    },
+    "diameter": {
+      "balanced_avg": 0.22222223546769904,
+      "uniform_avg": 0.33333335320154855,
+      "difference": -0.11111111773384952,
+      "percent_diff": -33.33333333333333,
+      "better": "balanced"
+    },
+    "spectral_gap": {
+      "balanced_avg": 0.4685544266204477,
+      "uniform_avg": 1.0435695463956318,
+      "difference": -0.575015119775184,
+      "percent_diff": -55.10079531941303,
+      "better": "uniform"
+    },
+    "algebraic_connectivity": {
+      "balanced_avg": 0.4685544266204477,
+      "uniform_avg": 1.0435695463956318,
+      "difference": -0.575015119775184,
+      "percent_diff": -55.10079531941303,
+      "better": "uniform"
+    },
+    "cheeger_constant": {
+      "balanced_avg": 0.23427721331022386,
+      "uniform_avg": 0.5217847731978159,
+      "difference": -0.287507559887592,
+      "percent_diff": -55.10079531941303,
+      "better": "uniform"
+    },
+    "mean_edge_weight": {
+      "balanced_avg": 0.13635242126349323,
+      "uniform_avg": 0.33333335320154855,
+      "difference": -0.19698093193805533,
+      "percent_diff": -59.09427605912321,
+      "better": "uniform"
+    },
+    "max_edge_weight": {
+      "balanced_avg": 0.40079366723223325,
+      "uniform_avg": 0.33333335320154855,
+      "difference": 0.0674603140306847,
+      "percent_diff": 20.238093002921048,
+      "better": "balanced"
+    },
+    "min_edge_weight": {
+      "balanced_avg": 0.002267573958013608,
+      "uniform_avg": 0.33333335320154855,
+      "difference": -0.331065779243535,
+      "percent_diff": -99.3197278531433,
+      "better": "uniform"
+    },
+    "std_edge_weight": {
+      "balanced_avg": 0.096896699636894,
+      "uniform_avg": 0.0,
+      "difference": 0.096896699636894,
+      "percent_diff": 0,
+      "better": "balanced"
+    }
+  },
+  "overall_better": {
+    "connectivity": "uniform",
+    "path_efficiency": "balanced",
+    "oversquashing_reduction": "uniform"
+  }
+}

@@ -99,24 +99,67 @@ def get_model(args, device):
     # heterogeneous, hierarchical GNN
     if hasattr(args, 'hetero') and args.hetero is not None:
         hetero_mpnn = HeteroGNN(
-            conv=args.hetero.conv,
-            b2c_conv=args.hetero.b2c if hasattr(args.hetero, 'b2c') else args.hetero.conv,
-            c2b_conv=args.hetero.c2b if hasattr(args.hetero, 'c2b') else args.hetero.conv,
-            c2c_conv=args.hetero.c2c if hasattr(args.hetero, 'c2c') else args.hetero.conv,
-            atom_encoder_handler=get_atom_encoder_handler,
-            bond_encoder_handler=get_bond_encoder_handler,
-            hid_dim=args.hetero.hidden,
-            centroid_hid_dim=args.hetero.cent_hidden if hasattr(args.hetero, 'cent_hidden') else args.hetero.hidden,
-            num_conv_layers=args.hetero.num_conv_layers,
-            num_mlp_layers=args.hetero.num_mlp_layers,
-            dropout=args.hetero.dropout,
-            norm=args.hetero.norm,
-            activation=args.hetero.activation,
-            use_res=args.hetero.residual,
-            delay=args.hetero.delay if hasattr(args.hetero, 'delay') else 0,
-            aggr=args.hetero.aggr,
-            parallel=args.hetero.parallel,
-        )
+            base={'in_channels': atom_encoder.out_dim,
+                  'hidden_channels': args.hetero.hidden,
+                  'edge_dim': bond_encoder.out_dim,
+                  'conv': args.hetero.conv,
+                  'conv_kwargs': {'num_layers': args.hetero.num_mlp_layers,
+                                  'norm': args.hetero.norm, 'activation': args.hetero.activation,
+                                  'dropout': args.hetero.dropout},
+                  'num_layers': args.hetero.num_conv_layers,
+                  'norm': args.hetero.norm, 'activation': args.hetero.activation, 'dropout': args.hetero.dropout,
+                  'residual': args.hetero.residual, 'delay': args.hetero.delay},
+
+            centroid={'in_channels': args.hetero.hidden,
+                      'hidden_channels': args.hetero.cent_hidden if hasattr(args.hetero, 'cent_hidden')
+                      else args.hetero.hidden,
+                      'edge_dim': None,
+                      'conv': args.hetero.conv,
+                      'conv_kwargs': {'num_layers': args.hetero.num_mlp_layers,
+                                      'norm': args.hetero.norm, 'activation': args.hetero.activation,
+                                      'dropout': args.hetero.dropout},
+                      'num_layers': args.hetero.num_conv_layers,
+                      'norm': args.hetero.norm, 'activation': args.hetero.activation, 'dropout': args.hetero.dropout,
+                      'residual': args.hetero.residual, 'delay': args.hetero.delay},
+
+            aggr=args.hetero.aggr, parallel=args.hetero.parallel if hasattr(args.hetero, 'parallel') else False,
+        ).to(device)
+
+        intra_graph_pool_func, intra_graph_pool_attr = get_graph_pooling(args.hybrid_model.intra_graph_pool)
+        inter_ensemble_pool_func = inter_ensemble_pooling(args.hybrid_model.inter_ensemble_pool)
+
+        # Check if we need to adjust num_centroids for Cayley initialization
+        if hasattr(args, 'edge_init_type') and args.edge_init_type == 'cayley':
+            # Import the function to calculate optimal virtual nodes
+            from models.cayley_utils import calculate_optimal_virtual_nodes
+            
+            # Get the average number of nodes in the dataset to calculate optimal virtual nodes
+            data_iter = get_data(args)
+            train_loader = data_iter['train']
+            total_nodes = 0
+            total_graphs = 0
+            
+            # Sample a small number of graphs to estimate average size
+            max_samples = min(10, len(train_loader))
+            for i, batch in enumerate(train_loader):
+                if i >= max_samples:
+                    break
+                total_nodes += batch.num_nodes
+                total_graphs += batch.num_graphs
+            
+            avg_nodes_per_graph = total_nodes // total_graphs if total_graphs > 0 else 10
+            
+            # Calculate optimal number of virtual nodes
+            optimal_num_centroids = calculate_optimal_virtual_nodes(avg_nodes_per_graph)
+            
+            # If num_centroids is a scalar, replace it; if it's a list, replace all elements
+            if isinstance(args.scorer_model.num_centroids, list):
+                args.scorer_model.num_centroids = [optimal_num_centroids] * len(args.scorer_model.num_centroids)
+            else:
+                args.scorer_model.num_centroids = [optimal_num_centroids]
+                
+            print(f"Adjusted num_centroids to {args.scorer_model.num_centroids} based on Cayley graph structure")
+
     else:
         hetero_mpnn = None
 
@@ -175,7 +218,7 @@ def get_model(args, device):
             auxloss_dict=args.auxloss,
             pool=intra_graph_pool_func,
             graph_pool_idx=intra_graph_pool_attr) if hasattr(args, 'auxloss') and args.auxloss is not None else None
-
+            
         hybrid_model = HybridModel(
             scorer_model=scorer_model,
             list_num_centroids=args.scorer_model.num_centroids,  # this is a list
@@ -186,7 +229,8 @@ def get_model(args, device):
             jk_func=partial(jumping_knowledge, jk=args.hybrid_model.jk),
             graph_pool_idx=intra_graph_pool_attr,
             pred_head=pred_head,
-            auxloss_func=auxloss_func
+            auxloss_func=auxloss_func,
+            edge_init_type=args.edge_init_type if hasattr(args, 'edge_init_type') else 'uniform'
         ).to(device)
         return hybrid_model
     else:

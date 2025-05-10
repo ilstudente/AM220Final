@@ -1,0 +1,9 @@
+Dataset: ENZYMES
+Epochs: 8
+Top-k: 3
+Batch size: 4
+Hidden dim: 16
+
+Final Test Accuracy:
+Balanced Cayley: 0.2500
+Uniform: 0.2500

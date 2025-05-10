@@ -22,7 +22,8 @@ class HybridModel(torch.nn.Module):
                  jk_func: Callable,
                  graph_pool_idx: str,
                  pred_head: torch.nn.Module,
-                 auxloss_func: Optional[Callable]):
+                 auxloss_func: Optional[Callable],
+                 edge_init_type: str = 'uniform'):
         super(HybridModel, self).__init__()
 
         self.scorer_model = scorer_model
@@ -35,6 +36,7 @@ class HybridModel(torch.nn.Module):
         self.graph_pool_idx = graph_pool_idx
         self.pred_head = pred_head
         self.auxloss_func = auxloss_func
+        self.edge_init_type = edge_init_type
 
     def forward(self, data, for_plots_only=False):
         device = data.x.device
@@ -75,9 +77,7 @@ class HybridModel(torch.nn.Module):
         # add a dimension for multiply broadcasting
         # centx: repeats, n_centroids, n_graphs, features
         centroid_x = self.base2centroid_model(data, node_mask[..., None])
-        centroid_x = centroid_x.permute(0, 2, 1, 3).reshape(-1, centroid_x.shape[-1])
-
-        # construct a heterogeneous hierarchical graph
+        centroid_x = centroid_x.permute(0, 2, 1, 3).reshape(-1, centroid_x.shape[-1])        # construct a heterogeneous hierarchical graph
         # low to high hierarchy
         src = torch.arange(data.num_nodes * repeats, device=device).repeat_interleave(n_centroids)
         dst = torch.arange(repeats * n_graphs, device=device).repeat_interleave(
@@ -90,6 +90,46 @@ class HybridModel(torch.nn.Module):
         idx = np.hstack([np.vstack(np.triu_indices(n_centroids, k=1)),
                          np.vstack(np.tril_indices(n_centroids, k=-1))])
         idx = torch.from_numpy(idx).to(device)
+          # Determine edge weights based on initialization type
+        if self.edge_init_type == 'cayley':
+            from models.cayley_utils import cayley_initialize_edge_weight
+            # Handle edge weights for each individual graph in the batch
+            edge_weight_list = []
+            
+            # Process each graph in the batch separately
+            offset = 0
+            for nodes_in_graph in nnodes_list:
+                try:
+                    # Initialize with Cayley graph for this specific graph
+                    graph_weights = cayley_initialize_edge_weight(
+                        num_base_nodes=int(nodes_in_graph), 
+                        num_virtual_nodes=n_centroids
+                    ).to(device)
+                    
+                    # Repeat the weights for each sample/ensemble
+                    graph_weights = graph_weights.repeat(repeats, 1, 1)
+                    
+                    # Reshape to match expected format
+                    edge_weight = graph_weights.permute(0, 2, 1).reshape(-1)
+                    edge_weight_list.append(edge_weight)
+                    
+                except Exception as e:
+                    # Fall back to uniform initialization if Cayley graph initialization fails
+                    print(f"Warning: Falling back to uniform initialization for a graph: {e}")
+                    uniform_weight = node_mask.permute(0, 2, 1).reshape(-1)[offset:offset+int(nodes_in_graph)*n_centroids]
+                    edge_weight_list.append(uniform_weight)
+                    
+                offset += int(nodes_in_graph) * n_centroids
+                
+            # Combine all weights
+            try:
+                edge_weight = torch.cat(edge_weight_list)
+            except Exception as e:
+                print(f"Warning: Failed to concatenate edge weights: {e}. Falling back to uniform initialization.")
+                edge_weight = node_mask.permute(0, 2, 1).reshape(-1)
+        else:
+            # Original uniform initialization
+            edge_weight = node_mask.permute(0, 2, 1).reshape(-1)
 
         new_data = HeteroData(
             base={'x': data.x,  # will be later filled
@@ -108,12 +148,12 @@ class HybridModel(torch.nn.Module):
             base__to__centroid={
                 'edge_index': torch.vstack([src, dst]),
                 'edge_attr': None,
-                'edge_weight': node_mask.permute(0, 2, 1).reshape(-1)
+                'edge_weight': edge_weight
             },
             centroid__to__base={
                 'edge_index': torch.vstack([dst, src]),
                 'edge_attr': None,
-                'edge_weight': node_mask.permute(0, 2, 1).reshape(-1)
+                'edge_weight': edge_weight
             },
             centroid__to__centroid={
                 'edge_index': idx.repeat(1, n_graphs * repeats) +

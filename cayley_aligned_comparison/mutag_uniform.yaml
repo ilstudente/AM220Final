@@ -1,0 +1,67 @@
+base2centroid:
+  activation: gelu
+  centroid_aggr: mean
+  conv: gine
+  dropout: 0.0
+  norm: batch_norm
+  num_conv_layers: 2
+  num_mlp_layers: 3
+batch_size: 128
+ckpt: false
+data_path: ./datasets
+dataset: MUTAG
+debug: false
+edge_init_type: uniform
+encoder: null
+hetero:
+  activation: gelu
+  aggr: cat
+  cent_hidden: 128
+  conv: gine
+  delay: 2
+  dropout: 0.0
+  hidden: 64
+  norm: batch_norm
+  num_conv_layers: 8
+  num_mlp_layers: 2
+  parallel: true
+  residual: true
+hybrid_model:
+  inter_ensemble_pool: mean
+  inter_pred_layer: 2
+  intra_graph_pool: mean
+  intra_pred_layer: 2
+  jk: identity
+  target: centroid
+log_test: true
+lr: 0.001
+max_epoch: 20
+min_epoch: 200
+num_runs: 1
+patience: 30
+plots:
+  graph: true
+  plot_every: 20
+sampler:
+  assign_value: false
+  n_samples: 2
+  name: simple
+  num_ensemble: 1
+  sample_k: 1
+scheduler_patience: 50
+scheduler_type: cos_with_warmup
+scorer_model:
+  activation: gelu
+  conv: gine
+  dropout: 0.0
+  hidden: 64
+  norm: batch_norm
+  num_centroids: 10
+  num_conv_layers: 0
+  num_mlp_layers: 2
+wandb:
+  entity: mls-stuttgart
+  name: MUTAG_uniform_init
+  project: TUDatasets-IPR-MPNN-Compare
+  use_wandb: false
+weight_decay: 0.0

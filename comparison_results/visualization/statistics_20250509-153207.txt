@@ -1,0 +1,32 @@
+Comparison of Initialization Methods
+==================================
+
+Base Nodes: 30
+Virtual Nodes: 15
+
+Uniform Initialization:
+  mean: 0.06666667014360428
+  std: 0.0
+  min: 0.06666667014360428
+  max: 0.06666667014360428
+  nonzero: 450
+  sparsity: 0.0
+  avg_connections_per_base_node: 15.0
+
+Cayley Initialization:
+  mean: 0.1088888868689537
+  std: 0.31184643507003784
+  min: 0.0
+  max: 1.0
+  nonzero: 49
+  sparsity: 0.8911111111111111
+  avg_connections_per_base_node: 1.6333333253860474
+
+Comparison:
+  mean difference (Cayley - Uniform): 0.042222
+  std difference (Cayley - Uniform): 0.311846
+  min difference (Cayley - Uniform): -0.066667
+  max difference (Cayley - Uniform): 0.933333
+  nonzero difference (Cayley - Uniform): -401.000000
+  sparsity difference (Cayley - Uniform): 0.891111
+  avg_connections_per_base_node difference (Cayley - Uniform): -13.366667

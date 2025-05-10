@@ -1,0 +1,17 @@
+/usr/local/python/3.12.1/lib/python3.12/site-packages/torch_geometric/data/storage.py:452: UserWarning: Unable to accurately infer 'num_nodes' from the attribute set '{'edge_index'}'. Please explicitly set 'num_nodes' as an attribute of 'data' to suppress this warning
+  warnings.warn(
+Using device: cpu
+Loading MUTAG dataset...
+Dataset has 188 graphs with avg 17.93 nodes per graph
+Average nodes per graph: 17.93
+Base nodes: 17, Cayley n: 3, Total Cayley nodes: 27, Virtual nodes: 10
+Reference: For average of 17.93 base nodes, would use 10 virtual nodes with Cayley n=3
+But we'll be calculating optimal virtual nodes for each graph individually instead
+Training uniform initialization model...
+Epoch 10/10, Train Loss: 0.3741, Train Acc: 0.8400, Val Loss: 0.7767, Val Acc: 0.8333
+Test Accuracy: 0.9000
+
+Training Cayley initialization model...
+Epoch 10/10, Train Loss: 0.3756, Train Acc: 0.8200, Val Loss: 0.7650, Val Acc: 0.8333
+Test Accuracy: 0.9000
+Comparison complete! Results saved to custom_comparison_results/mutag/

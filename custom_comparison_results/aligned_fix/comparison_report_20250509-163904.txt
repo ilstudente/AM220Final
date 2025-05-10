@@ -1,0 +1,6 @@
+Comparison Report: Uniform vs. Cayley Initialization
+=====================================================
+
+Dataset: MUTAG
+Average nodes per graph: 17.93
+Virtual nodes (Cayley-aligned): 10

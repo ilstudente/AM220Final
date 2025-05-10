@@ -1,0 +1,30 @@
+
+==================================================
+Ultra-Lightweight PROTEINS Experiment
+Epochs: 5, Top-k: 3, Batch size: 4, Hidden dim: 16
+==================================================
+Loading PROTEINS dataset...
+Dataset loaded: 1113 graphs, 3 features, 2 classes
+Train set: 890 graphs, Test set: 223 graphs
+Using device: cpu
+
+Training models with memory optimization...
+Traceback (most recent call last):
+  File "/workspaces/IPR-MPNN/run_ultra_light_proteins.py", line 270, in <module>
+    run_ultra_light_proteins(
+  File "/workspaces/IPR-MPNN/run_ultra_light_proteins.py", line 158, in run_ultra_light_proteins
+    balanced_loss, balanced_train_acc = train(balanced_model, balanced_optimizer, train_loader)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/IPR-MPNN/run_ultra_light_proteins.py", line 99, in train
+    out = model(data)
+          ^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/IPR-MPNN/models/memory_saver_iprmpnn.py", line 191, in forward
+    graph_features = torch.stack(graph_features, dim=0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: stack expects each tensor to be equal size, but got [16] at entry 0 and [1, 16] at entry 3

@@ -1,0 +1,102 @@
+{
+  "dataset": "MUTAG",
+  "num_graphs_analyzed": 10,
+  "balanced_vs_uniform": {
+    "num_nodes": {
+      "balanced_avg": 16.6,
+      "uniform_avg": 16.6,
+      "difference": 0.0,
+      "percent_diff": 0.0,
+      "better": "uniform"
+    },
+    "num_virtual_nodes": {
+      "balanced_avg": 7.6,
+      "uniform_avg": 7.6,
+      "difference": 0.0,
+      "percent_diff": 0.0,
+      "better": "uniform"
+    },
+    "num_edges": {
+      "balanced_avg": 108.2,
+      "uniform_avg": 140.8,
+      "difference": -32.60000000000001,
+      "percent_diff": -23.153409090909093,
+      "better": "uniform"
+    },
+    "density": {
+      "balanced_avg": 0.7703117679820466,
+      "uniform_avg": 1.0,
+      "difference": -0.2296882320179534,
+      "percent_diff": -22.96882320179534,
+      "better": "uniform"
+    },
+    "avg_path_length": {
+      "balanced_avg": 0.0896757300815196,
+      "uniform_avg": 0.383333347241084,
+      "difference": -0.2936576171595644,
+      "percent_diff": -76.60633213182959,
+      "better": "balanced"
+    },
+    "diameter": {
+      "balanced_avg": 0.25772908859863397,
+      "uniform_avg": 0.383333347241084,
+      "difference": -0.12560425864245,
+      "percent_diff": -32.76632715271068,
+      "better": "balanced"
+    },
+    "spectral_gap": {
+      "balanced_avg": 0.42225138077853835,
+      "uniform_avg": 1.069446659578237,
+      "difference": -0.6471952787996986,
+      "percent_diff": -60.516835786362286,
+      "better": "uniform"
+    },
+    "algebraic_connectivity": {
+      "balanced_avg": 0.42225138077853835,
+      "uniform_avg": 1.069446659578237,
+      "difference": -0.6471952787996986,
+      "percent_diff": -60.516835786362286,
+      "better": "uniform"
+    },
+    "cheeger_constant": {
+      "balanced_avg": 0.43695509435685836,
+      "uniform_avg": 0.5570844409002303,
+      "difference": -0.12012934654337198,
+      "percent_diff": -21.563938556468543,
+      "better": "uniform"
+    },
+    "mean_edge_weight": {
+      "balanced_avg": 0.1736382306365594,
+      "uniform_avg": 0.383333347241084,
+      "difference": -0.20969511660452458,
+      "percent_diff": -54.7030719121455,
+      "better": "uniform"
+    },
+    "max_edge_weight": {
+      "balanced_avg": 0.5440476517547816,
+      "uniform_avg": 0.383333347241084,
+      "difference": 0.16071430451369767,
+      "percent_diff": 41.92546922160207,
+      "better": "balanced"
+    },
+    "min_edge_weight": {
+      "balanced_avg": 0.004030097434091792,
+      "uniform_avg": 0.383333347241084,
+      "difference": -0.3793032498069922,
+      "percent_diff": -98.94867027272815,
+      "better": "uniform"
+    },
+    "std_edge_weight": {
+      "balanced_avg": 0.1255700497901523,
+      "uniform_avg": 2.7755575615628914e-17,
+      "difference": 0.12557004979015227,
+      "percent_diff": 4.524137835550595e+17,
+      "better": "balanced"
+    }
+  },
+  "overall_better": {
+    "connectivity": "uniform",
+    "path_efficiency": "balanced",
+    "oversquashing_reduction": "uniform"
+  }
+}

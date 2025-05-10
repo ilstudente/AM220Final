@@ -1,0 +1,73 @@
+Comparison Report: Uniform vs. Cayley Initialization
+=====================================================
+
+Dataset: MUTAG
+Average nodes per graph: 17.93
+Reference - Cayley-aligned virtual nodes: 10
+Reference - Cayley graph parameter n: 3
+
+Test Metrics:
+  Test Accuracy:
+    Uniform: 0.8000
+    Cayley:  0.8000
+    Improvement: 0.00%
+
+Final Training Loss:
+  Uniform: 0.3761
+  Cayley:  0.4097
+
+Final Validation Loss:
+  Uniform: 0.3966
+  Cayley:  0.7485
+
+Oversquashing Metrics:
+  Cheeger Constants:
+    Uniform: 0.2220
+    Cayley:  0.0177
+    Cayley is 92.05% worse
+
+  Dirichlet Energies:
+    Uniform: 102.9944
+    Cayley:  58.8232
+    Cayley is 42.89% better
+
+  Effective Resistances:
+    Uniform: 7.0840
+    Cayley:  9.5923
+    Cayley is 35.41% worse
+
+  Connections Per Base:
+    Uniform: 4.6500
+    Cayley:  1.5110
+    Cayley is 67.50% better
+
+  Connections Per Virtual:
+    Uniform: 12.0791
+    Cayley:  4.2323
+    Cayley is 64.96% better
+
+Connectivity Statistics (After Learning):
+  Nonzero Ratio:
+    Uniform: 61.96
+    Cayley:  21.27
+
+  Avg Connections Per Base:
+    Uniform: 4.65
+    Cayley:  1.51
+
+  Avg Connections Per Virtual:
+    Uniform: 12.08
+    Cayley:  4.23
+
+Analysis:
+  The Cayley initialization uses a mathematical structure based on the Cayley graph
+  to connect base nodes to virtual nodes. This creates a sparse but structured connectivity
+  pattern, which may help the model propagate information more effectively across
+  distant parts of the graph.
+
+  In contrast, the uniform initialization connects each base node to every virtual node
+  with equal weights, which may lead to over-smoothing or less effective message passing.
+
+  The Uniform initialization achieved higher test accuracy. This could be because
+  the MUTAG dataset's graph structure doesn't benefit from the specific connectivity
+  pattern created by the Cayley graph initialization.
